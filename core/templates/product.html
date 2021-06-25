@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact page</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+    <h1>Products</h1>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{% url 'index' %}">{{product.nome}}</a></td>
+                <td>{{product.preco}}</td>
+                <td>{{product.estoque}}</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</body>
+</html>
