@@ -3,35 +3,47 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Home page</title>
+	<title>DevBlog</title>
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <center>
-    <h1>Pagina principal</h1>
-    <img src="{% static 'images/logo.png' %}"/>
-    <h2>{{curso}}</h2>
-    <h2>{{logado}}</h2>
-    <h1>{{name}}</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for product in Product %}
-            <tr>
-                <td><a href="{% url 'product' product.id %}">{{product.nome}}</a></td>
-                <td>{{product.preco}}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>    
-    <button onclick="teste();">Click aqui!</button>
+    
+	<div id="navegacao">
+		<div id="area">
+		<h1 id="logo"><span class="verde">Dev</span>Blog</h1>
+		<div id="menu">
+			<a href="index.html">Home</a>
+			<a href="programing.html">Programing</a>
+			<a href="projects.html">Projects</a>
+			<a href="about.html">About</a>
+		
 
-</center>
+		</div>
+		</div>
+	</div>
+
+	<div id="area-principal">
+		<div id="postagem">
+			<h2><span class="verde">Primeira postagem</span></h2>
+			<span class="data-postagem">Postado em 27/06/2021</span>
+			<img src="{% static 'images/programacao.png' %}"/>
+			<p>Esta será minha primeira publicação, apenas iniciando meu DevBlog com o intuito de postar e compartilhar minha jornada em linguagens que estou aprendendo, como: Java, HTML, CSS, Python, JavaScrip e etc.</p>
+			
+
+			<span class="postado">Postado por Lucas Yamazaki</span>
+		</div>
+
+		<div id="postagem">
+			<h2><span class="verde">Primeira postagem</span></h2>
+			<span class="data-postagem">Postado em 28/06/2021</span>
+			<img src="{% static 'images/programacao.png' %}"/>
+			<p>Esta será minha primeira publicação, apenas iniciando meu DevBlog com o intuito de postar e compartilhar minha jornada em linguagens que estou aprendendo, como: Java, HTML, CSS, Python, JavaScrip e etc.</p>
+			
+
+			<span class="postado">Postado por Lucas Yamazaki</span>
+		</div>
+
+	</div>
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
